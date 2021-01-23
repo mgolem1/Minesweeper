@@ -1,4 +1,4 @@
-from kvadratic import Kvadratic
+#from kvadratic import Kvadratic
 class Polje(object):
     def __init__(self):
         self.oznaceni_kvadratici=-1
