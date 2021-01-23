@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-23T21:43:37.728Z" agent="5.0 (Windows)" etag="Ski63SOC8TOrfAp-hqZj" version="14.2.7" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-01-23T21:53:22.912Z" agent="5.0 (Windows)" etag="yPL-PVC2yXmcD4RMAN6G" version="14.2.7" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1213" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -41,36 +41,18 @@
     </mxGraphModel>
   </diagram>
   <diagram id="UWM7reK0WthTaTUoEeZW" name="Page-2">
-    <mxGraphModel dx="1320" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1213" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="SNWNIi_O5o-XO_WbMXo4-0" />
         <mxCell id="SNWNIi_O5o-XO_WbMXo4-1" parent="SNWNIi_O5o-XO_WbMXo4-0" />
-        <mxCell id="SNWNIi_O5o-XO_WbMXo4-2" value="Kvadratic" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="SNWNIi_O5o-XO_WbMXo4-1" vertex="1">
-          <mxGeometry x="50" y="40" width="160" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="SNWNIi_O5o-XO_WbMXo4-3" value="+ x: int&#xa;+ y: int&#xa;+ stanje: string&#xa;+ je_li_mina: bool&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SNWNIi_O5o-XO_WbMXo4-2" vertex="1">
-          <mxGeometry y="26" width="160" height="64" as="geometry" />
-        </mxCell>
-        <mxCell id="SNWNIi_O5o-XO_WbMXo4-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="SNWNIi_O5o-XO_WbMXo4-2" vertex="1">
-          <mxGeometry y="90" width="160" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="SNWNIi_O5o-XO_WbMXo4-5" value="+ otvoren(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SNWNIi_O5o-XO_WbMXo4-2" vertex="1">
-          <mxGeometry y="98" width="160" height="42" as="geometry" />
-        </mxCell>
-        <mxCell id="7JLIUrpyvmqwKlqKWIFI-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="SNWNIi_O5o-XO_WbMXo4-1" source="SNWNIi_O5o-XO_WbMXo4-11" target="SNWNIi_O5o-XO_WbMXo4-2" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="SNWNIi_O5o-XO_WbMXo4-11" value="Polje" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="SNWNIi_O5o-XO_WbMXo4-1" vertex="1">
-          <mxGeometry x="50" y="230" width="160" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="SNWNIi_O5o-XO_WbMXo4-12" value="+ oznaceni_kvadratici: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SNWNIi_O5o-XO_WbMXo4-11" vertex="1">
-          <mxGeometry y="26" width="160" height="26" as="geometry" />
+          <mxGeometry x="60" y="40" width="160" height="144" as="geometry" />
         </mxCell>
         <mxCell id="SNWNIi_O5o-XO_WbMXo4-13" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="SNWNIi_O5o-XO_WbMXo4-11" vertex="1">
-          <mxGeometry y="52" width="160" height="8" as="geometry" />
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="SNWNIi_O5o-XO_WbMXo4-14" value="+ stvori_polje(): void&#xa;+ get_kvadratic(): Kvadratic&#xa;+ otvori_kvadratic(): void&#xa;+ provjeri_susjede(): void&#xa;+ otvori_susjede(): void&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SNWNIi_O5o-XO_WbMXo4-11" vertex="1">
-          <mxGeometry y="60" width="160" height="110" as="geometry" />
+        <mxCell id="SNWNIi_O5o-XO_WbMXo4-14" value="+ stvori_polje(): void&#xa;+ otvori_kvadratic(): void&#xa;+ provjeri_susjede(): void&#xa;+ otvori_susjede(): void&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SNWNIi_O5o-XO_WbMXo4-11" vertex="1">
+          <mxGeometry y="34" width="160" height="110" as="geometry" />
         </mxCell>
         <mxCell id="7JLIUrpyvmqwKlqKWIFI-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="SNWNIi_O5o-XO_WbMXo4-1" source="JyApMe_Z8Yto3u2DdBUj-0" target="SNWNIi_O5o-XO_WbMXo4-14" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -78,19 +60,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="JyApMe_Z8Yto3u2DdBUj-0" value="PrikazIgre" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="SNWNIi_O5o-XO_WbMXo4-1" vertex="1">
-          <mxGeometry x="345" y="380" width="160" height="114" as="geometry" />
+          <mxGeometry x="345" y="176" width="160" height="118" as="geometry" />
         </mxCell>
         <mxCell id="JyApMe_Z8Yto3u2DdBUj-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="JyApMe_Z8Yto3u2DdBUj-0" vertex="1">
           <mxGeometry y="26" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="JyApMe_Z8Yto3u2DdBUj-3" value="+prikaziPocetakIgre()&#xa;+PrikaziPolje()&#xa;+postavi_mine()&#xa;+postavi_vrijednosti()&#xa;&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="JyApMe_Z8Yto3u2DdBUj-0" vertex="1">
-          <mxGeometry y="34" width="160" height="80" as="geometry" />
+          <mxGeometry y="34" width="160" height="84" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="qKFGrWH5XtpPPCbLzvBo" name="Page-4">
-    <mxGraphModel dx="1038" dy="523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1213" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0WSslZ65O88RoMmm2lLY-0" />
         <mxCell id="0WSslZ65O88RoMmm2lLY-1" parent="0WSslZ65O88RoMmm2lLY-0" />
