@@ -2,21 +2,21 @@
 import random
 global mine_values
 global n
-def prikaziPocetakIgre():
-    print()
-    print('Dobrodošli na Minesweeper!')
-    print('==========================')
-    print()
-    print('''
+def prikaziPocetakIgre(self):
+     print()
+     print('='*19)
+     print('*'*3+' MineSweeper '+'*'*3)
+     print('='*19)
+     print()
+     print('''
 MAIN MENU
 *********
-
 ->Za instrukcije kako igrati igru, pritisnite tipku 'I'
--> Za igrati igru, pritisnite tipku 'P'
+-> Za početak igre, pritisnite tipku 'P'
 ''')
 
 def PrikaziPolje():
-    n=10
+    n=9
     mine_values=[[0for y in range(n)] for x in range(n)] 
     
  
@@ -102,7 +102,22 @@ def postavi_vrijednosti():
             if r < n-1 and col< n-1 and numbers[r+1][col+1]==-1:
                 numbers[r][col] = numbers[r][col] + 1
 
-    
+def Odabir():
+    br=[x for x in range(1,10)]
+    while True:
+        odg=int(input('Odaberite brojeve polja (najprije stupac pa redak): '))
+        if odg>99 or odg<11 :
+            odg=int(input('Odaberite brojeve polja (najprije stupac pa redak): '))
+        else:
+            Odabran(odg[0],odg[1])
+
+def lokacija(a,b,c):
+    return c[a][b]
+
+def Odabran(a,b):
+    matrica=postavi_vrijednosti()
+    v=lokacija(a,b,matrica)
+    matrica[a][b]=v
     
     
     
