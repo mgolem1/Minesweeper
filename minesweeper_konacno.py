@@ -1,21 +1,9 @@
 import random, copy, replit
 
-##b = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
-##k = [[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']]
-
-#dohvacanje lokacije
-def lokacija(r, c, b):
-    return b[r][c]
-##def postaviMine(b):
-##        r = random.randint(0, 8)
-##        c = random.randint(0, 8)
-##        currentRow = b[r]
-##        if not currentRow[c] == '*':
-##            currentRow[c] = '*'
-##        else:
-##            postaviMine(b)
 class Polje():
-
+    
+    def lokacija(r, c, b):
+    return b[r][c]
     
     def postaviMine(b):
         r = random.randint(0, 8)
@@ -73,21 +61,21 @@ class Polje():
         #Row above
         if r-1 > -1:
             row = k[r-1]
-            if c-1 > -1: row[c-1] = lokacija(r-1, c-1, b)
-            row[c] = lokacija(r-1, c, b)
-            if 9 > c+1: row[c+1] = lokacija(r-1, c+1, b)
+            if c-1 > -1: row[c-1] = Polje.okacija(r-1, c-1, b)
+            row[c] = Polje.lokacija(r-1, c, b)
+            if 9 > c+1: row[c+1] = Polje.lokacija(r-1, c+1, b)
 
         #Same row
         row = k[r]
-        if c-1 > -1: row[c-1] = lokacija(r, c-1, b)
-        if 9 > c+1: row[c+1] = lokacija(r, c+1, b)
+        if c-1 > -1: row[c-1] = Polje.lokacija(r, c-1, b)
+        if 9 > c+1: row[c+1] = Polje.lokacija(r, c+1, b)
 
         #Row below
         if 9 > r+1:
             row = k[r+1]
-            if c-1 > -1: row[c-1] = lokacija(r+1, c-1, b)
-            row[c] = lokacija(r+1, c, b)
-            if 9 > c+1: row[c+1] = lokacija(r+1, c+1, b)
+            if c-1 > -1: row[c-1] = Polje.lokacija(r+1, c-1, b)
+            row[c] = Polje.lokacija(r+1, c, b)
+            if 9 > c+1: row[c+1] = Polje.lokacija(r+1, c+1, b)
 
     def provjeraNule(k,b,r,c):
         oldGrid = copy.deepcopy(k)
@@ -98,7 +86,7 @@ class Polje():
             oldGrid = copy.deepcopy(k)
             for x in range (9):
                 for y in range (9):
-                    if lokacija(x, y, k) == 0:
+                    if Polje.lokacija(x, y, k) == 0:
                         Polje.nule(x, y, k, b)
             if oldGrid == k:
                 return
@@ -108,14 +96,15 @@ class Polje():
         print('    A   B   C   D   E   F   G   H   I')
         print('  ╔═══╦═══╦═══╦═══╦═══╦═══╦═══╦═══╦═══╗')
         for r in range (0, 9):
-            print(r,'║',lokacija(r,0,b),'║',lokacija(r,1,b),'║',lokacija(r,2,b),'║',lokacija(r,3,b),'║',lokacija(r,4,b),'║',lokacija(r,5,b),'║',lokacija(r,6,b),'║',lokacija(r,7,b),'║',lokacija(r,8,b),'║')
+            print(r,'║',Polje.lokacija(r,0,b),'║',Polje.lokacija(r,1,b),'║',Polje.lokacija(r,2,b),'║',Polje.lokacija(r,3,b),'║',Polje.lokacija(r,4,b),'║',Polje.lokacija(r,5,b),'║',Polje.lokacija(r,6,b),'║',Polje.lokacija(r,7,b),'║',Polje.lokacija(r,8,b),'║')
             if not r == 8:
                 print('  ╠═══╬═══╬═══╬═══╬═══╬═══╬═══╬═══╬═══╣')
         print('  ╚═══╩═══╩═══╩═══╩═══╩═══╩═══╩═══╩═══╝') 
+        
 class Controller():
     
     def marker(r,c,k):
-        k[r][c] = '⚐'
+        k[r][c] = '°'
         Polje.printPolje(k)
 
     def odabir(b,k):
@@ -132,12 +121,6 @@ class Controller():
                 return (ord(izbor[0]))-97, int(izbor[1])
             else:
                 Controller.odabir(b,k)
-
-
-
-        
-
-
 
 class PrikazIgre():
     def igra():
@@ -164,7 +147,7 @@ class PrikazIgre():
         elif unos.upper()!='P':
             replit.clear()
             PrikazIgre.igra()
-##        b = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
         b = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
         k = [[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']]
 
@@ -172,19 +155,18 @@ class PrikazIgre():
             Polje.postaviMine(b)
         for r in range (0, 9):
             for c in range (0, 9):
-                value = lokacija(r, c, b)
+                value = Polje.lokacija(r, c, b)
                 if value == '*':
                     Polje.updateVrijednosti(r, c, b)
-##        k = [[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']]
 
         Polje.printPolje(k)
         Play.play(b,k)
+        
 class Play():
 
-    
     def play(b,k):
         c, r = Controller.odabir(b, k)
-        v = lokacija(r, c, b)
+        v = Polje.lokacija(r, c, b)
         if v == '*':
             Polje.printPolje(b)
             print('Igra gotova!')
@@ -202,7 +184,7 @@ class Play():
         for x in range (0, 9):
             row = k[x]
             ostatakKvadratica += row.count(' ')
-            ostatakKvadratica += row.count('⚐')
+            ostatakKvadratica += row.count('°')
         if ostatakKvadratica == 10:
             Polje.printPolje(b)
             print('Pobjeda!')
@@ -215,5 +197,7 @@ class Play():
                 quit()
         Play.play(b,k)
 
-PrikazIgre.igra()
+def main():
+    PrikazIgre.igra()
 
+main()
