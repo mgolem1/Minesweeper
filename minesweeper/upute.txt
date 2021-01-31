@@ -1,0 +1,17 @@
+
+	UPUTE
+======================
+
+Cilj MineSweeper igre je odrediti lokaciju 10 mina, koje su slucajno poslozene u polju 9x9.
+
+Svaki potez je upisivanje koordinate kvadratica u polje, npr. A7 (stupac+redak).
+
+Ako je mina u tom kvadraticu, igra je gotova. Suprotno, broj mina koje okruzuju taj kvadratic, ukljucujuci dijagonalu, će se pojaviti u tom kvadraticu.
+
+Ako je taj broj 0, kvadratici će se 'otvoriti' automatski.
+
+Ako mislis da je na nekom kvadraticu mina, upiši 'M' uz koordinatu kvadratića, npr. ME5
+
+Pobjedjujes 'otvarajuci' sve kvadratice osim onih s minom.
+
+Sretno!
