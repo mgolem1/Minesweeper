@@ -126,18 +126,17 @@ class PrikazIgre():
     def igra():
         
         print()
-        print('='*19)
-        print('*'*3+' MineSweeper '+'*'*3)
-        print('='*19)
-        print()
+        print(' ='*19)
+        print('  * '*3+' MineSweeper '+'  * '*3)
+        print(' ='*19)
         print('''
-    
-    ----------------------------------------
-    -> Za upute igre, pritisnite tipku 'I'
-    -> Za početak igre, pritisnite tipku 'P'
-    ----------------------------------------
+ ----------------------------------------
+ -> Za upute igre, pritisnite tipku 'I'
+ -> Za početak igre, pritisnite tipku 'P'
+ ----------------------------------------
     
     ''')
+
 
         unos=input('Upiši ovdje: ').upper()
         if unos.upper()=='I':
